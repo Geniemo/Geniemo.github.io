@@ -97,7 +97,7 @@ author:
   avatar           : "/assets/images/88x88_forAvatar.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "SKKU-software 10th"
   location         : "Korea"
-  email            : "kor98won@gmail.com"
+  email            : //"kor98won@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
