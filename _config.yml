@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 locale                   : "en-US"
 title                    : "GenieWonimanimo"
 title_separator          : "|"
-subtitle                 : "Magical programmer" # site tagline that appears below site title in masthead
+subtitle                 : "Coding addict" # site tagline that appears below site title in masthead
 name                     : "GenieWonimanimo"
 description              : "Genie's amazing blog"
 url                      : "https://GenieWonimanimo.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -97,7 +97,7 @@ author:
   avatar           : "/assets/images/88x88_forAvatar.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "SKKU-software 10th"
   location         : "Korea"
-  email            : //"kor98won@gmail.com"
+  email            : # "kor98won@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
