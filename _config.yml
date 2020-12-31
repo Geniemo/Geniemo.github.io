@@ -20,13 +20,13 @@ title                    : "GenieWonimanimo"
 title_separator          : "|"
 subtitle                 : "Coding addict" # site tagline that appears below site title in masthead
 name                     : "GenieWonimanimo"
-description              : "Genie's amazing blog"
+description              : "Steady Programmer"
 url                      : "https://GenieWonimanimo.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "GenieWonimanimo/GenieWonimanimo.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "assets/images/GenieForLogo.jpg" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "Coding addict" # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 250
 comments:
@@ -96,7 +96,7 @@ author:
   name             : "Park Ji Weon"
   avatar           : "/assets/images/88x88_forAvatar.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "SKKU-software 10th"
-  location         : "Korea"
+  location         : "Republic of Korea"
   email            : "kor98won@gmail.com"
   links:
     - label: "Email"
@@ -207,7 +207,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 10 # amount of posts to show
 paginate_path: /page:num/
 timezone: Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
