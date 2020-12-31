@@ -33,7 +33,7 @@ int main(void)
 Below is about Conversion specifier in C Lang
 
 | Conv specifier         |  Output target   |      Output form       |
-| :--------------------- | :--------------: | ---------------------: |
+| :--------------------- | :--------------- | :--------------------- |
 | &#37;d                 | char, short, int | signed decimal number  |
 | &#37;ld                | long             | signed decimal number  |
 | &#37;lld               | long long        | signed decimal number  |
