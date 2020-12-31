@@ -14,7 +14,7 @@ last_modified_at: 2020-12-31
 
 If you know well about Conversion specifier, this problem is easy to solve
 
-''' c
+'''c
 
 #include <stdio.h>
 
