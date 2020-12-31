@@ -1,9 +1,9 @@
 ---
-title: "boj"
-permalink: /categories/boj/
+title: "BOJ"
+permalink: /categories/BOJ/
 layout: category
 author_profile: true
-taxonomy: boj
+taxonomy: BOJ
 ---
 
 ## Baekjoon Online Judge
