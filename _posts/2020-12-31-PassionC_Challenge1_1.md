@@ -15,6 +15,7 @@ last_modified_at: 2020-12-31
 If you know well about Conversion specifier, this problem is easy to solve
 
 ''' c
+
 #include <stdio.h>
 
 int main(void) 
@@ -26,6 +27,7 @@ int main(void)
 	printf("print by hexadecimal: %#x", num);
 	return 0;
 }
+
 '''
 
 Below is about Conversion specifier in C Lang
