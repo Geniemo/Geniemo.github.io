@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://geniewonimanimo.github.io/sitemap.xml
+Sitemap: https://geniewonimanimo.github.io/sitemap.xml
