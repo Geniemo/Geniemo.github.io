@@ -3,10 +3,10 @@ title:  "Linked List"
 excerpt: "야매 연결 리스트"
 
 categories:
-  - 실전 알고리즘
+  - Practical Algo
 
 toc: true
-toc_label: "목차"
+toc_label: "Linked List"
 
 last_modified_at: 2021-01-30
 ---
@@ -20,9 +20,9 @@ last_modified_at: 2021-01-30
 <table>
   <thead>
     <tr>
-      <th style="text-align: left" width="150"> </th>
-      <th style="text-align: center" width="70">배열</th>
-      <th style="text-align: center" width="70">연결 리스트</th>
+      <th style="text-align: left" width="250"> </th>
+      <th style="text-align: center" width="120">배열</th>
+      <th style="text-align: center" width="120">연결 리스트</th>
     </tr>
   </thead>
   <tbody>
