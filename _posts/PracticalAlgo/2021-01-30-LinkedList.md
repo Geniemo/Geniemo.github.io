@@ -51,3 +51,95 @@ last_modified_at: 2021-01-30
 그런 경우에 노드 구조체나 클래스를 이용한 정석적인 구현을 하기에는 힘들 수 있으니 아래 링크에 있는 야매 연결 리스트를 이용하시면 됩니다.<br>
 
 야매 연결 리스트 <https://github.com/GenieWonimanimo/PracticalAlgo/blob/master/LinkedList.cpp>
+
+## 활용 예제
+연결 리스트를 활용한 문제는 심하게 어려운 응용문제들은 출제하기가 어렵고 텍스트 에디터와 같은 전형적 문제들이 출제가 됩니다.<br>
+아래 문제를 연결 리스트를 이용하여 풀어보면 도움이 됩니다.
+
+백준 1406번 <https://www.acmicpc.net/problem/1406>
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const int MX = 1000005;
+char dat[MX];
+int pre[MX], nxt[MX];
+int unused = 1;
+
+void Insert(int addr, char item){ // addr 번지 뒤에 num을 추가
+    dat[unused] = item;
+    pre[unused] = addr;
+    nxt[unused] = nxt[addr];
+    if (nxt[addr] != -1) pre[nxt[addr]] = unused;
+    nxt[addr] = unused;
+    unused++;
+}
+
+void Erase(int addr){ // addr 번지의 원소를 제거
+    nxt[pre[addr]] = nxt[addr];
+    if (nxt[addr] != -1) pre[nxt[addr]] = pre[addr];
+}
+
+void Traverse(){
+  int cur = nxt[0];
+  while(cur != -1){
+    cout << dat[cur];
+    cur = nxt[cur];
+  }
+}
+
+int main(void)
+{
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+
+    fill(pre, pre + MX, -1);
+    fill(nxt, nxt + MX, -1);
+
+    int cur = 0;
+    string str;
+    cin >> str;
+    for (auto c : str)
+    {
+        Insert(cur, c);
+        cur++;
+    }
+
+    int M;
+    cin >> M;
+    for (int i = 0; i < M; i++)
+    {
+        char option;
+        cin >> option;
+        switch (option)
+        {
+        case 'L': // 왼쪽으로 커서 이동
+            if (pre[cur] != -1)
+                cur = pre[cur];
+            break;
+        case 'D': // 오른쪽으로 커서 이동
+            if (nxt[cur] != -1)
+                cur = nxt[cur];
+            break;
+        case 'B': // 왼쪽에 있는 것 삭제
+            if (pre[cur] != -1)
+            {
+                Erase(cur);
+                cur = pre[cur];
+            }
+            break;
+        case 'P': // 왼쪽에 문자 삽입
+        {
+            char c;
+            cin >> c;
+            Insert(cur, c);
+            cur = nxt[cur];
+        }
+        }
+    }
+    Traverse();
+    return 0;
+}
+```
