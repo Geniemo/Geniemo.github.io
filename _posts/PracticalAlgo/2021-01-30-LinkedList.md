@@ -17,11 +17,32 @@ last_modified_at: 2021-01-30
 3. 원소들이 메모리 상에 연속하여 존재하지 않아 Cache hit rate가 낮지만 할당이 다소 쉬움.
 
 ## 배열 VS 연결 리스트
-|                         |  배열  |  연결 리스트  |
-|:------------------------|:------:|:------------:|
-|k번째 원소에 접근         |  O(1)  |     O(K)     |
-|임의 위치에 원소 추가/제거|  O(N)  |     O(1)     |
-|메모리 상의 배치          |  연속  |    불연속    |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left" width="150"> </th>
+      <th style="text-align: center" width="70">배열</th>
+      <th style="text-align: center" width="70">연결 리스트</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">K번째 원소에 접근</td>
+      <td style="text-align: center">O(1)</td>
+      <td style="text-align: center">O(K)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">임의 위치에 원소 추가/제거</td>
+      <td style="text-align: center">O(N)</td>
+      <td style="text-align: center">O(1)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">메모리 상의 배치</td>
+      <td style="text-align: center">연속</td>
+      <td style="text-align: center">불연속</td>
+    </tr>
+  </tbody>
+</table>
 
 <i style="color: #FF4500;">연결 리스트는 배열에 비해 임의 위치에 원소를 추가 또는 제거가 자주 필요할 때에 사용합니다.</i>
 
