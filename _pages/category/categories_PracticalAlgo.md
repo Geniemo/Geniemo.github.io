@@ -1,9 +1,9 @@
 ---
-title: "실전 알고리즘"
+title: "Practical Algo"
 permalink: /categories/PracticalAlgorithm/
 layout: category
 author_profile: true
-taxonomy: 실전 알고리즘
+taxonomy: Practical Algo
 ---
 
-## 실전 알고리즘
+## Practical Algo
