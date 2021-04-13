@@ -63,83 +63,62 @@ last_modified_at: 2021-01-30
 using namespace std;
 
 const int MX = 1000005;
-char dat[MX];
-int pre[MX], nxt[MX];
+int dat[MX], pre[MX], nxt[MX];
 int unused = 1;
 
-void Insert(int addr, char item){ // addr 번지 뒤에 num을 추가
-    dat[unused] = item;
+void insert(int addr, int num){ // addr 번지 뒤에 num을 추가
+    dat[unused] = num;
     pre[unused] = addr;
     nxt[unused] = nxt[addr];
     if (nxt[addr] != -1) pre[nxt[addr]] = unused;
     nxt[addr] = unused;
     unused++;
 }
-
-void Erase(int addr){ // addr 번지의 원소를 제거
+ 
+void erase(int addr){ // addr 번지의 원소를 제거
     nxt[pre[addr]] = nxt[addr];
     if (nxt[addr] != -1) pre[nxt[addr]] = pre[addr];
 }
 
-void Traverse(){
+void traverse(){
   int cur = nxt[0];
   while(cur != -1){
-    cout << dat[cur];
+    cout << dat[cur] << ' ';
     cur = nxt[cur];
   }
+  cout << "\n\n";
 }
 
-int main(void)
-{
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
+void insert_test(){
+  cout << "****** insert_test *****\n";
+  insert(0, 10); // 10(address=1)
+  traverse();
+  insert(0, 30); // 30(address=2) 10
+  traverse();
+  insert(2, 40); // 30 40(address=3) 10
+  traverse();
+  insert(1, 20); // 30 40 10 20(address=4)
+  traverse();
+  insert(4, 70); // 30 40 10 20 70(address=5)
+  traverse();
+}
 
-    fill(pre, pre + MX, -1);
-    fill(nxt, nxt + MX, -1);
+void erase_test(){
+  cout << "****** erase_test *****\n";
+  erase(1); // 30 40 20 70
+  traverse();
+  erase(2); // 40 20 70
+  traverse();
+  erase(4); // 40 70
+  traverse();
+  erase(5); // 40
+  traverse();
+}
 
-    int cur = 0;
-    string str;
-    cin >> str;
-    for (auto c : str)
-    {
-        Insert(cur, c);
-        cur++;
-    }
-
-    int M;
-    cin >> M;
-    for (int i = 0; i < M; i++)
-    {
-        char option;
-        cin >> option;
-        switch (option)
-        {
-        case 'L': // 왼쪽으로 커서 이동
-            if (pre[cur] != -1)
-                cur = pre[cur];
-            break;
-        case 'D': // 오른쪽으로 커서 이동
-            if (nxt[cur] != -1)
-                cur = nxt[cur];
-            break;
-        case 'B': // 왼쪽에 있는 것 삭제
-            if (pre[cur] != -1)
-            {
-                Erase(cur);
-                cur = pre[cur];
-            }
-            break;
-        case 'P': // 왼쪽에 문자 삽입
-        {
-            char c;
-            cin >> c;
-            Insert(cur, c);
-            cur = nxt[cur];
-        }
-        }
-    }
-    Traverse();
-    return 0;
+int main(void) {
+  fill(pre, pre+MX, -1);
+  fill(nxt, nxt+MX, -1);
+  insert_test();
+  erase_test();
 }
 ```
