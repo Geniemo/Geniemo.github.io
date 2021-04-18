@@ -50,7 +50,7 @@ last_modified_at: 2021-01-30
 대다수의 코딩 테스트에서는 C++ STL을 이용한다면 문제가 없겠지만, 아주 간혹 코딩 테스트에서 STL을 허용하지 않을 수 있습니다.<br>
 그런 경우에 노드 구조체나 클래스를 이용한 정석적인 구현을 하기에는 힘들 수 있으니 아래 링크에 있는 야매 연결 리스트를 이용하시면 됩니다.<br>
 
-야매 연결 리스트 <https://github.com/GenieWonimanimo/PracticalAlgo/blob/master/LinkedList.cpp>
+야매 연결 리스트 <https://github.com/Geniemo/PracticalAlgo/blob/master/LinkedList.cpp>
 
 ```cpp
 #include <bits/stdc++.h>
