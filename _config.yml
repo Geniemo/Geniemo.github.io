@@ -18,9 +18,9 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 locale                   : "en-US"
 title                    : "Geniemo"
 title_separator          : "|"
-subtitle                 : "Coding addict" # site tagline that appears below site title in masthead
+subtitle                 : "꾸준한 개발자" # site tagline that appears below site title in masthead
 name                     : "Geniemo"
-description              : "Steady Programmer"
+description              : "꾸준한 개발자"
 url                      : "https://Geniemo.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "Geniemo/Geniemo.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
