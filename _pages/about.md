@@ -9,6 +9,6 @@ toc_label: "MYSELF"
 
 ## Park Ji Weon
 
-SKKUniv software 10-th
+성균관대학교 소프트웨어학과 10th
 
-코딩 좋아
+PS동아리 NPC
