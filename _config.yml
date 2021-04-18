@@ -32,7 +32,7 @@ words_per_minute         : 250
 comments:
   provider               : "disqus"
     # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
-  disqus:
+  disqus: 
     shortname            : "Geniemo-github-io"
       # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
