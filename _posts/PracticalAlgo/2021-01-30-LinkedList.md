@@ -6,6 +6,7 @@ categories:
   - Practical Algo
 
 toc: true
+toc_sticky: true
 toc_label: "Linked List"
 
 last_modified_at: 2021-01-30
