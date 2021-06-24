@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "쥐니모 ! !"  # 탭 이름
+title                    : "쥐니모 ! !1"  # 탭 이름
 title_separator          : "|"
-subtitle                 : "쥐니모 ! !" # site tagline that appears below site title in masthead
-name                     : "쥐니모 ! !"
-description              : "Geniemo"
+subtitle                 : "쥐니모 ! !2" # site tagline that appears below site title in masthead
+name                     : "쥐니모 ! !3"
+description              : "쥐니모 ! !4"
 url                      : "https://Geniemo.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "Geniemo/Geniemo.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
