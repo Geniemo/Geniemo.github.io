@@ -27,7 +27,7 @@ CSV는 Comma Separated Values의 약자로, 모든 값들이 ,로 구분된 형�
 
 내가 사용한 파일의 내용은 아래와 같다.
 
-<img src = "/assets/images/SQL DB/csv_contents.png" width = "40%" height = "40%">
+<img src = "/assets/images/SQL DB/csv_contents.png" width = "80%" height = "80%">
 
 Workbench에는 CSV파일을 그대로 테이블로 만들어주는 기능이 있는데, 이를 이용해 codeit에서 다운로드한 파일로 member라는 이름의 테이블을 생성해보겠다.
 
@@ -45,5 +45,7 @@ Workbench에는 CSV파일을 그대로 테이블로 만들어주는 기능이 �
 
 테이블의 column들을 보고 싶다면 schemas 에서 만든 table의 이름 옆에 마우스를 갖다 대면 세 개의 버튼이 나오는데, 그것 중 가운데 버튼을 누르면 아래와 같이 각 column들을 살펴볼 수 있다.
 
-<img src = "/assets/images/SQL DB/table_overview.png" width = "40%" height = "40%">
+<img src = "/assets/images/SQL DB/table_overview.png" width = "80%" height = "80%">
+
+## 3. Primary Key 설정하기
 
