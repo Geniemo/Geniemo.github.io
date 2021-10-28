@@ -49,3 +49,44 @@ Workbench에는 CSV파일을 그대로 테이블로 만들어주는 기능이 �
 
 ## 3. Primary Key 설정하기
 
+<img src = "/assets/images/SQL DB/created_table.png" width = "80%" height = "80%">
+
+위에서 만든 테이블을 살펴보면 이렇게 생겼는데, 여기서 id는 각 row를 고유하게 식별할 수 있도록 하는 column이다. 이것을 Primary Key 라고 한다.<br>
+여기서 나는 이 id라는 column을 primary key로 확실히 정해주려고 한다. 그러면 아래 사진처럼 id의 pk에 체크를 해주면 된다.
+
+<img src = "/assets/images/SQL DB/set_pk.png" width = "80%" height = "80%">
+
+체크를 해주면 id 왼쪽에 있는 아이콘이 열쇠 모양으로 바뀌는데, 이는 id가 primary key라는 것을 알려준다. 이렇게 바꾼 설정을 적용하려면 우측 하단의 Apply 버튼을 눌러주면, id column이 member 테이블의 primary key로 설정된다.
+
+## 4. Primary key의 종류
+
+Primary Key는 크게 Natural Key와 Surrogate Key로 구분할 수 있다.
+
+Natural Key: 어떤 개체가 갖고 있는 속성을 나타내는 column이 Primary Key가 됐을 때 이를 Natural Key 라고 한다. 내가 만든 테이블에서 만약 email을 pk로 설정했다면 pk가 Natural Key인 것이다.
+
+Surrogate Key: 앞서 설정한 id column같은 pk를 의미한다. id는 어떤 member의 속성을 직접적으로 나타내는 column은 아니다. 그저 pk로 사용하기 위해 인위적으로 생성한 column이다. 이처럼 개체의 실제 속성은 아니지만 pk로 쓰기 위해 추가한 column을 Surrogate Key 라고 한다.
+
+## 5. NOT NULL 의 의미
+
+앞서 id를 Primary Key로 설정하면서 PK 체크박스에 체크를 했는데, 이 때 NN도 같이 체크가 된 모습을 볼 수 있다. 이 NN은 NOT NULL의 줄임말이다. primary key는 항상 NOT NULL이어야 한다.
+
+NULL: 특정 column에서 값이 존재하지 않는 상태를 나타낸다.
+
+NN은 이 column에는 반드시 어떤 값이 들어있어야 함을 의미한다.<br>
+이렇게 NOT NULL이 설정된 column에 NULL이 들어가게 될 row를 추가하려고 하면 DB에서 에러를 내서 그런 row가 추가될 수 없게 한다.
+
+## 6. Primary Key와 Auto Increment 속성
+
+우리는 Primary Key로 인위적으로 추가한 id는 Surrogate Key라고 했는데, Surrogate Key는 보통 1부터 시작해서 1씩 증가하는 정수값을 갖는다.
+
+그렇다면 매번 새롭게 추가되는 row의 id는 이전 row의 id보다 1이 큰 정수가 되어야 할텐데,<br>
+대부분의 DBMS에는 매번 새로운 row가 추가될 때마다 id에 이전보다 1이 큰 정수를 자동으로 넣어주는 기능이 있다.
+
+<img src = "/assets/images/SQL DB/auto_increment.png" width = "80%" height = "80%">
+
+위와 같이 AI(Auto Increment)에 체크를 해주고 적용해주면 row를 추가할 때 id를 사용자가 직접 지정해줄 필요가 없다.
+
+## 7. 날짜 관련 column은 DATE 타입
+
+column에 보면 birthday나 sign_up_day처럼 날짜 관련 정보를 담고 있는 column이 있는데,<br>
+이런 column은 Datatype을 DATE로 설정해주면 이후 날짜 관련 계산에서 편리하게 이용할 수 있다.
