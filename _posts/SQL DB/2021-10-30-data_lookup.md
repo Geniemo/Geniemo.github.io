@@ -61,7 +61,7 @@ WHERE: 특정 조건을 만족하는 row들만 조회하려고 할 때 사용
 이런 성질을 이용해서 유연하게 가독성을 높이는 것이 좋은 방법이다.
 ```sql
 SELECT *           FROM ~~
-    WHERE ~~~; #adsf
+    WHERE ~~~;
 ```
 3. SQL문을 작성할 때에, MySQL에 기본적으로 내장된 키워드들(예약어 라고 한다.)은 대문자로 써주는 것이 관례이다.
 4. 앞에서는 어떤 테이블을 특정하기 위해서 dbname.tablename방식의 SQL문을 사용했는데,<br>
@@ -74,31 +74,12 @@ SELECT * FROM tablename;
 
 ## 3. 조건을 나타내는 다양한 방법
 
-- 값을 비교하는 방법<br>
-<div class="language-sql highlighter-rouge">
-    <div class="highlight">
-        <pre class="highlight">
-            <code>
-                <span class="k">WHERE</span> <span class="n">col</span> <span class="o">=</span> <span class="n">val</span>
-            </code>
-        </pre>
-    </div>
-</div>
-1. col = val: 값이 같은지 확인
-2. col != val: 값이 다른지 확인
-3. col >= val: col의 값이 val보다 크거나 같은지 확인, 마찬가지로 >, <=, <도 사용 가능하다.
-4. col > '2019-01-01': DATE 타입에 대해서도 부등호 사용이 가능하다. 이 경우에는 col이 2019-01-01 이후인지 확인.
-5. col BETWEEN val1 AND val2;
-```sql
-WHERE col = val;  # 값이 같은지 확인
-WHERE col != val;  # 값이 다른지 확인
-WHERE col >= val;  # col의 값이 val보다 크거나 같은지 확인, 마찬가지로 >, <=, < 도 사용 가능하다.
-WHERE col > '2019-01-01';  # DATE 타입에 대해서도 부등호 사용이 가능하다.
-                            # 앞의 경우에는 col이 2019-01-01 이후인지 확인
+1. **<i style="color: red">col = val</i>**: 값이 같은지 확인
+2. **<i style="color: red">col != val</i>**: 값이 다른지 확인
+3. **<i style="color: red">col >= val</i>**: col의 값이 val보다 크거나 같은지 확인, 마찬가지로 >, <=, < 도 사용 가능하다.
+4. **<i style="color: red">col > '2019-01-01'</i>**: DATE 타입에 대해서도 부등호 사용이 가능하다. 이 경우에는 col이 2019-01-01 이후인지 확인.
+5. **<i style="color: red">col BETWEEN val1 AND val2</i>**: col의 값이 [val1, val2]에 포함되는지 확인
+6. **<i style="color: red">col BETWEEN '2019-01-01' AND '2019-12-31'</i>**: DATE 타입에 대해서도 BETWEEN 사용이 가능한데, 이 경우엔 col이 2019년 이내인지 확인
+7. **<i style="color: red">col NOT BETWEEN val1 AND val2</i>**: col의 값이 [val1, val2]에 포함되지 않는지 확인
 
-WHERE col BETWEEN val1 AND val2;  # col의 값이 [val1, val2]에 포함되는지 확인
-WHERE col BETWEEN '2019-01-01' AND '2019-12-31';  # DATE 타입에 대해서도 BETWEEN 을 사용할 수 있는데,
-                                                    # 앞의 경우에는 col이 2019년 이내인지 확인
-
-WHERE col NOT BETWEEN val1 AND val2;  # col의 값이 [val1, val2]에 포함되지 않는지 확인
-```
+## 4. 문자열 패턴 매칭 조건
