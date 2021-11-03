@@ -40,7 +40,7 @@ SELECT column1, column2, ... FROM dbname.tablename;
 나는 email, age, address column을 가져와보겠다.<br>
 결과는 아래와 같다.
 
-<img src = "/assets/images/SQL DB/select_column_query.png" width = "80%" height = "80%">
+<img src = "/assets/images/SQL DB/select_column_query.png" width = "50%" height = "50%">
 
 여기까지가 column을 선택해서 데이터를 가져오는 방법이었고,<br>
 이제 row를 선택해서 데이터를 가져와보자.
@@ -74,7 +74,7 @@ SELECT * FROM tablename;
 
 ## 3. 조건을 나타내는 다양한 방법
 
-- 값을 비교하는 방법
+- 값을 비교하는 방법<br>
 ```sql
 WHERE col = val;  # 값이 같은지 확인
 WHERE col != val;  # 값이 다른지 확인
