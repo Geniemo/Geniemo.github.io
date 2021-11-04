@@ -197,3 +197,62 @@ SELECT * FROM dbname.tablename WHERE 조건1 OR (조건2 AND 조건3) OR 조건4
 # 이것처럼 실제 원하는 바와 다르게 해석될 수 있으므로 OR과 AND를 섞어 쓸 때에는 주의하도록 하고,
 # 될 수 있으면 우선순위를 신경쓰기보다는 실수를 줄이기 위해 각 조건에 괄호를 씌워주는 것이 좋다.
 ```
+
+## 8. 문자열 패턴 매칭 조건 사용 시 주의할 점
+
+<div><b>1. 이스케이핑 문제</b></div>
+
+%가 포함된 모든 문자열을 찾으려고 한다고 해보자.<br>
+아래와 같이 작성하면 원하는 대로 작동할까?
+
+```sql
+SELECT * FROM dbname.tablename WHERE col LIKE '%%%';
+```
+원하는 대로 작동하지 않고 어떠한 필터링도 되지 않은 채 모든 row들이 나오게 될 것이다.<br>
+그 이유는 위에서 쓴 모든 % 들이 문자로서의 %가 아니라 LIKE에서 쓰이는 표현식으로 간주되었기 때문인데,<br>
+이런 표현식 말고 문자로서의 % 를 써주려면 % 앞에 \ 을 붙여주면 된다.<br>
+아래처럼 작성한다면 원하는 대로 작동한다.
+```sql
+SELECT * FROM dbname.tablename WHERE col LIKE '%\%%';
+```
+이 외에도 %, _, ', " 같은 문자들을 직접 찾으려면 앞에 \ 을 붙여주면 된다.
+
+<div><b>2. 대소문자 구분 문제</b></div>
+테이블 설정의 Table collation이 case-insensitive(ci)로 설정되어 있다면 문자열 비교 시 대소문자 구분이 안된다.<br>
+따라서, 설정에 관계없이 대소문자 구분을 할 수 있는 방법이 필요하다.<br>
+정확히 소문자 a가 포함된 문자열을 나타내려고 한다면 아래와 같이 작성하면 된다.
+
+```sql
+SELECT * FROM dbname.tablename WHERE col LIKE BINARY '%a%';
+```
+
+LIKE 뒤에 BINARY를 붙인 게 보일텐데,<br>
+a와 A는 같은 알파벳이긴 하지만 컴퓨터에서 0과 1의 조합으로 저장될 때 다른 값으로 저장된다.<br>
+BINARY를 붙인 것은 알파벳 뿐만 아니라 0과 1 수준까지 문자열 비교를 하라는 뜻이다.<br>
+따라서 대소문자를 구별하고 싶다면 BINARY를 잘 활용해보자.
+
+## 9. 데이터 정렬해서 보기
+
+이번에는 데이터를 정렬해보자.<br>
+어떤 col에 대해서 정렬을 하고싶다면 다음과 같이 SQL문을 작성하면 된다.
+```sql
+SELECT * FROM dbname.tablename ORDER BY col;  # 기본적으로 오름차순 정렬을 해주지만, 실수를 방지하기 위해
+SELECT * FROM dbname.tablename ORDER BY col ASC;  # 이렇게 작성해주는게 좋다.
+SELECT * FROM dbname.tablename ORDER BY col DESC;  # 내림차순 정렬은 DESC를 붙여주면 된다.
+```
+
+어떤 조건을 건 후 조건에 부합하는 row들에 대해서만 정렬을 하고 싶다면 다음과 같이 작성해주면 된다.
+```sql
+SELECT * FROM dbname.tablename
+WHERE 조건
+ORDER BY col ASC;
+```
+
+이렇게 한 가지 col에 대해서 정렬을 할 수 있는데,<br>
+여러 col에 대해서 정렬을 하고 싶을 수도 있다.<br>
+그럴 경우엔 아래와 같이 작성해주면 된다.
+```sql
+SELECT * FROM dbname.tablename
+ORDER BY col1 DESC, col2 ASC;  # col1 기준으로 우선 내림차순 정렬 후 col1이 같은 row들은 다시 col2 기준으로 오름차순 정렬
+                                # 즉, 먼저 쓴 컬럼을 우선순위로 해서 정렬한다.
+```
