@@ -247,6 +247,8 @@ SELECT * FROM dbname.tablename
 WHERE 조건
 ORDER BY col ASC;
 ```
+이렇게 쓸 때, 각 절의 작성 순서는 지켜지지 않으면 에러가 발생하므로 엄격하게 지켜줘야 한다.<br>
+MySQL에서 SELECT문 내의 각 절들 간 작성 순서가 정확히 알고 싶다면 [여기](https://dev.mysql.com/doc/refman/8.0/en/select.html)를 참고하자.
 
 이렇게 한 가지 col에 대해서 정렬을 할 수 있는데,<br>
 여러 col에 대해서 정렬을 하고 싶을 수도 있다.<br>
