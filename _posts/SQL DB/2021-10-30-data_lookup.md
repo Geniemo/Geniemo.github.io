@@ -278,3 +278,21 @@ SELECT * FROM dbname.tablename ORDER BY CAST(col AS signed) ASC;  # col의 데�
 signed는 양수와 음수를 포함한 모든 정수를 나타낼 수 있는 데이터 타입이다.<br>
 0 이상의 모든 정수를 표현하고 싶다면 unsigned를,<br>
 소수점이 있는 수를 표현하고 싶다면 decimal을 사용하면 된다.
+
+## 11. 데이터 일부만 추려보기
+
+앞에서는 row들을 정렬해서 가져오는 걸 해봤는데,<br>
+이번에는 그 결과 중 일부만 추려서 한 번 가져와보자.
+```sql
+SELECT * FROM dbname.tablename
+ORDER BY col DESC  # col 기준으로 내림차순 정렬한 후
+LIMIT 10;  # 상단 10개 row만 가져온다.
+```
+위와 같이 <i style="color:red"><b>LIMIT</b></i>을 이용하면 된다.
+
+만약 9번째 row로부터 2개의 row만 가져오려고 한다면 아래와 같이 작성하면 된다.
+```sql
+SELECT * FROM dbname.tablename
+ORDER BY col DESC
+LIMIT 8, 2;
+```
