@@ -1,6 +1,6 @@
 ---
 title:  "[SQL DB] 테이블 생성하기"
-excerpt: "step 2"
+excerpt: "step 02"
 
 categories:
   - SQL DB

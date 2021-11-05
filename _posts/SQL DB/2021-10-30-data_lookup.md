@@ -1,6 +1,6 @@
 ---
 title:  "[SQL DB] 데이터 조회로 기본 다지기"
-excerpt: "step 3"
+excerpt: "step 03"
 
 categories:
   - SQL DB
