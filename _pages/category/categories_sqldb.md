@@ -1,9 +1,11 @@
 ---
 title: "SQL DB"
 permalink: /categories/SQL-DB/
-layout: category
+layout: archive
 author_profile: true
 taxonomy: SQL DB
+sidebar_main: true
 ---
 
-## SQL DB
+{% assign posts = site.categories['SQL DB'] %}
+{% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}

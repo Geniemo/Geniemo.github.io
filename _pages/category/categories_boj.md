@@ -1,9 +1,11 @@
 ---
 title: "BOJ"
 permalink: /categories/BOJ/
-layout: category
+layout: archive
 author_profile: true
 taxonomy: BOJ
+sidebar_main: true
 ---
 
-## Baekjoon Online Judge
+{% assign posts = site.categories['boj'] %}
+{% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}

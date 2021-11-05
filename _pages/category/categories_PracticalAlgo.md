@@ -1,9 +1,11 @@
 ---
 title: "Practical Algo"
 permalink: /categories/PracticalAlgorithm/
-layout: category
+layout: archive
 author_profile: true
 taxonomy: Practical Algo
+sidebar_main: true
 ---
 
-## Practical Algo
+{% assign posts = site.categories['Practical Algo'] %}
+{% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}
