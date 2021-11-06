@@ -46,6 +46,14 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+        <span class="nav__sub-title">자격증</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "cospro" %}
+                        <li><a href="/categories/cospro" class="">COS Pro ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
         <span class="nav__sub-title">독서</span>
             <ul>
                 {% for category in site.categories %}
