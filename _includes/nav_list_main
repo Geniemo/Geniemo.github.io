@@ -38,6 +38,14 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+        <span class="nav__sub-title">Data</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Data Science" %}
+                        <li><a href="/categories/data_science" class="">데이터 사이언스 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
         <span class="nav__sub-title">SQL</span>
             <ul>
                 {% for category in site.categories %}
