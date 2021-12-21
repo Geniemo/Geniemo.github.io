@@ -1,11 +1,11 @@
 ---
-title: "numpy"
-permalink: /categories/numpy/
+title: "blog"
+permalink: /categories/blog/
 layout: archive
 author_profile: true
-taxonomy: numpy
+taxonomy: blog
 sidebar_main: true
 ---
 
-{% assign posts = site.categories['numpy'] %}
+{% assign posts = site.categories['blog'] %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}
