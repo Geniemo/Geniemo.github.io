@@ -1,5 +1,5 @@
 ---
-title:  "데이터 사이언스란?"
+title:  "[Data Science] 데이터 사이언스란?"
 excerpt: "Data Science"
 
 categories:
