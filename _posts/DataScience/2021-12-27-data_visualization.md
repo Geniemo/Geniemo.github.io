@@ -63,3 +63,37 @@ seaborn을 사용하면 더 많은 그래프를, 더 멋지게 그려낼 수 있
 > 카테고리별 시각화
 
 <script src="https://gist.github.com/Geniemo/f082326cade70e4b3db4c3b967c5c170.js"></script>
+
+> 상관 계수 시각화
+
+<script src="https://gist.github.com/Geniemo/e4e18dd621b298dc1eca43aff15a74e4.js"></script>
+
+## EDA
+
+EDA(Exploratory Data Analysis)는 주어진 데이터를 다양한 관점에서 살펴보고 탐색하면서 인사이트를 찾는 것입니다.<br>
+EDA에는 공식이 없습니다.<br>
+시각적 기법이든 통게적 기법이든 다양한 방법으로 데이터를 살펴보는 것입니다.
+
+codeit 강의에서 제공해주는 데이터로 한 번 EDA를 해보겠습니다.
+
+이 데이터는 147개의 column을 가지고 있고, 997개의 row가 있습니다.<br>
+147개의 컬럼은 아래와 같이 구성되어 있습니다.
+
+- 0 ~ 18: 음악 취향
+- 19 ~ 30: 영화 취향
+- 31 ~ 62: 취미/관심사
+- 63 ~ 72: 공포증
+- 73 ~ 75: 건강 습관
+- 76 ~ 132: 성격, 인생관 등
+
+이런 데이터를 대상으로 뭘 분석해보기 전에 기본 정보들부터 분석해보도록 하겠습니다.
+
+> 기본 정보 파악하기
+
+<script src="https://gist.github.com/Geniemo/afceebf6039c7c3b8be7e8495e0ac22c.js"></script>
+
+설문에 참여한 사람들에 대해 어느정도 파악을 했으니 이제 직접적인 분석을 해보겠습니다.
+
+> 상관 관계 분석 (Correlation Analysis)
+
+<script src="https://gist.github.com/Geniemo/06934d94884a13348bc6fc3584b01e44.js"></script>
