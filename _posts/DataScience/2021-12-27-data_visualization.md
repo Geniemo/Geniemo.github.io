@@ -104,3 +104,28 @@ codeit 강의에서 제공해주는 데이터로 한 번 EDA를 해보겠습니�
 
 <script src="https://gist.github.com/Geniemo/5ff96c1149d717e19eac3c6814dd25af.js"></script>
 
+## 새로운 인사이트 발견하기
+
+> 새로운 값 계산하기
+
+<script src="https://gist.github.com/Geniemo/bad69872383389bba83e933e823a7f96.js"></script>
+
+> 문자열 필터링
+
+<script src="https://gist.github.com/Geniemo/4f2380d36437ba1d93d3dbf872cffd2f.js"></script>
+
+> 문자열 분리
+
+<script src="https://gist.github.com/Geniemo/1cdb2b01a659fc688f7848f7d54c3509.js"></script>
+
+> 카테고리로 분류
+
+<script src="https://gist.github.com/Geniemo/4a83664f2be5858a21a5ceb208d2a0ad.js"></script>
+
+> groupby
+
+<script src="https://gist.github.com/Geniemo/cbe862b8dfa5b8047e55d457dcc6987a.js"></script>
+
+> 데이터 합치기
+
+<script src="https://gist.github.com/Geniemo/8caf4e6ad7558d4230755b99ac9752b1.js"></script>
