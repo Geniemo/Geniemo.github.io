@@ -45,3 +45,21 @@ last_modified_at: 2021-12-27
 > 산점도
 
 <script src="https://gist.github.com/Geniemo/bef0ac3aa08bb1b2e1bea6ce681aebc7.js"></script>
+
+## seaborn 시각화
+
+seaborn이라는 라이브러리를 이용해서 그래프를 그릴 수 있는데,<br>
+seaborn을 사용하면 더 많은 그래프를, 더 멋지게 그려낼 수 있습니다.<br>
+그렇게 되면 같은 데이터로부터 더 좋은 insight를 얻게 될 수도 있습니다.
+
+> KDE Plot
+
+<script src="https://gist.github.com/Geniemo/956443fb55ddca2dcaf4729bb1f1b1ad.js"></script>
+
+> LM Plot
+
+<script src="https://gist.github.com/Geniemo/0cb6bd438ec71403ec09f6459a1e709f.js"></script>
+
+> 카테고리별 시각화
+
+<script src="https://gist.github.com/Geniemo/f082326cade70e4b3db4c3b967c5c170.js"></script>
