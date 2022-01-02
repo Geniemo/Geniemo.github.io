@@ -136,4 +136,4 @@ global minimum이 아닌 local minimum을 최저점으로 인식하게 될 수 �
 
 가설 함수가 변하는 모습을 애니메이션으로 확인해보겠습니다.
 
-<video src="/assets/videos/MachineLearning/linear_regression_visualization.mp4" controls>이 브라우저에서 지원하지 않는 동영상입니다.</video>
+<video src="/assets/videos/MachineLearning/linear_regression_visualization.mp4" controls width="400" height="300">이 브라우저에서 지원하지 않는 동영상입니다.</video>
