@@ -3,6 +3,7 @@ title: "BOJ"
 permalink: /categories/BOJ/
 layout: archive
 author_profile: true
+taxonomy: BOJ
 sidebar_main: true
 ---
 
