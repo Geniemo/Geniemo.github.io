@@ -128,3 +128,12 @@ i번 데이터의 y를 y<sup>(i)</sup>이라고 표현합니다.
 global minimum이 아닌 local minimum을 최저점으로 인식하게 될 수 있는 문제가 있습니다.
 
 따라서 이 learning rate 값에는 정답이 없고, 손실 함수의 값을 보며 개선해 나가야 합니다.
+
+여태 다뤘던 경사 하강법을 시각화해보겠습니다.<br>
+먼저 cost가 줄어드는 모습을 그래프로 확인해보겠습니다.
+
+<script src="https://gist.github.com/Geniemo/abc697acdea67b09b00083aa7298d3db.js"></script>
+
+가설 함수가 변하는 모습을 애니메이션으로 확인해보겠습니다.
+
+<video src="/assets/videos/MachineLearning/linear_regression_visualization.mp4" controls>이 브라우저에서 지원하지 않는 동영상입니다.</video>
