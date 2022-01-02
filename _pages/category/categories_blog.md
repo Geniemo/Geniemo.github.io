@@ -3,7 +3,6 @@ title: "blog"
 permalink: /categories/blog/
 layout: archive
 author_profile: true
-taxonomy: blog
 sidebar_main: true
 ---
 
