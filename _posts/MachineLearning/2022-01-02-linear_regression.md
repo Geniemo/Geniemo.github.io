@@ -43,18 +43,18 @@ i번 데이터의 y를 y<sup>(i)</sup>이라고 표현합니다.
 
 우리가 아는 일반적인 직선의 형태는<br>
 \\(y = ax + b\\)인데 선형 회귀에서는 일반적으로 사용하는 문자들이 따로 있습니다.<br>
-$h(x) = \theta_0 + \theta_{1}x$ 의 형식으로 보통 작성하는데요,<br>
+\\(h(x) = \theta_0 + \theta_{1}x\\) 의 형식으로 보통 작성하는데요,<br>
 지금은 이해의 편의를 위해서 입력 변수가 하나인 경우를 가정했지만,<br>
 실제로는 입력 변수가 여러 개인 경우가 더 많습니다.<br>
 그럴 경우에 아래와 같이<br>
-$f = ax + by + cz + \dots$의 형태로 쓰면 문자가 너무 많아서 보기에 좋지 않습니다.<br>
+\\(f = ax + by + cz + \dots\\)의 형태로 쓰면 문자가 너무 많아서 보기에 좋지 않습니다.<br>
 따라서, 아래와 같이<br>
-$h(x) = \theta_0 + \theta_{1}x_{1} + \theta_{2}x_{2} + \dots$의 형태로 쓰는 게 좋습니다.
+\\(h(x) = \theta_0 + \theta_{1}x_{1} + \theta_{2}x_{2} + \dots\\)의 형태로 쓰는 게 좋습니다.
 
-그리고 선형 회귀의 목적은 가장 적절한 $\theta$를 찾는 것입니다.<br>
-이걸 제대로 표현하기 위해서는 $h$ 밑에 $\theta$를 작게 써서<br>
-가설 함수 $h$가 $\theta$에 의해 결정된다고 나타낼 수 있습니다.<br>
-$h_{\theta}(x) = \theta_0 + \theta_{1}x_{1} + \theta_{2}x_{2} + \dots$
+그리고 선형 회귀의 목적은 가장 적절한 \\(\theta\\)를 찾는 것입니다.<br>
+이걸 제대로 표현하기 위해서는 \\(h\\) 밑에 \\(\theta\\)를 작게 써서<br>
+가설 함수 \\(h\\)가 \\(\theta\\)에 의해 결정된다고 나타낼 수 있습니다.<br>
+\\(h_{\theta}(x) = \theta_0 + \theta_{1}x_{1} + \theta_{2}x_{2} + \dots\\)
 
 ## 평균 제곱 오차 (MSE)
 
@@ -81,7 +81,7 @@ $h_{\theta}(x) = \theta_0 + \theta_{1}x_{1} + \theta_{2}x_{2} + \dots$
 
 수식으로 표현하면 아래와 같습니다.
 
-$\displaystyle MSE = \frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})^2$
+\\[\displaystyle MSE = \frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})^2\\]
 
 ## 손실 함수
 
@@ -92,22 +92,22 @@ $\displaystyle MSE = \frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})^2$
 손실 함수는 보통 J라는 문자를 쓰고,<br>
 선형 회귀의 경우에는 MSE가 손실 함수의 아웃풋입니다.
 
-$\displaystyle J(\theta) = \frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})^2$
+\\[\displaystyle J(\theta) = \frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})^2\\]
 
 ## 경사 하강법 (Gradient Descent)
 
 가설 함수를 최적선이 되게끔 개선하려면<br>
 가설 함수를 평가하는 기준이 있어야 하는데, 그 기준이 되는 게 손실 함수입니다.
 
-손실 함수는 인풋이 $\theta$입니다.<br>
-$\theta$에 따라 손실 함수의 아웃풋이 달라진다는 것입니다.
+손실 함수는 인풋이 \\(\theta\\)입니다.<br>
+\\(\theta\\)에 따라 손실 함수의 아웃풋이 달라진다는 것입니다.
 
 손실 함수의 아웃풋을 최소화하기 위해서 사용하는 방식 중 하나가<br>
 경사 하강법 (Gradient Descent)입니다.
 
 아웃풋을 최소화하기 위해 손실 함수의 극소값을 향해 가야하는데요,<br>
-기울기가 음수인 지점에서는 $\theta$를 늘리는 방향으로,<br>
-기울기가 양수인 지점에서는 $\theta$를 줄이는 방향으로 $\theta$를 이동시키면 됩니다.
+기울기가 음수인 지점에서는 \\(\theta\\)를 늘리는 방향으로,<br>
+기울기가 양수인 지점에서는 \\(\theta\\)를 줄이는 방향으로 \\(\theta\\)를 이동시키면 됩니다.
 
 얼마나 이동시킬지는 현재 위치의 경사진 정도에 비례해서 움직이면 됩니다.<br>
 이런식으로 계산 후 개선을 반복하는 것이 경사 하강법입니다.
@@ -116,10 +116,10 @@ $\theta$에 따라 손실 함수의 아웃풋이 달라진다는 것입니다.
 
 이걸 수식으로 표현하면 아래와 같습니다.
 
-$\displaystyle \theta \leftarrow \theta - \alpha\frac{\partial}{\partial\theta}J(\theta)$
+\\[\displaystyle \theta \leftarrow \theta - \alpha\frac{\partial}{\partial\theta}J(\theta)\\]
 
-여기서 $\alpha$는 학습률(learning rate)로,<br>
-한 번에 얼마나 $\theta$를 업데이트할지를 나타내는 지표입니다.
+여기서 \\(\alpha\\)는 학습률(learning rate)로,<br>
+한 번에 얼마나 \\(\theta\\)를 업데이트할지를 나타내는 지표입니다.
 
 이 값은 개발자가 직접 정해줘야 하는 값으로,<br>
 너무 크면 연산시간은 짧겠지만<br>
