@@ -137,3 +137,26 @@ global minimum이 아닌 local minimum을 최저점으로 인식하게 될 수 �
 가설 함수가 변하는 모습을 애니메이션으로 확인해보겠습니다.
 
 <video src="/assets/videos/MachineLearning/linear_regression_visualization.mp4" controls width="400" height="300">이 브라우저에서 지원하지 않는 동영상입니다.</video>
+
+## 모델 평가하기
+
+가설 함수는 세상에 일어나는 상황을 수학적으로 표현한다는 의미에서 모델 이라고 부릅니다.<br>
+모델을 학습시키고 나면 이 모델이 얼마나 좋은지 평가를 해야합니다.
+
+이 때 많이 쓰는 게 평균 제곱근 오차(root mean square error, RMSE)입니다.<br>
+그냥 위에서 다뤘던 MSE에 루트를 씌운 건데요,<br>
+목표 변수의 단위가 오차 제곱을 하면 단위<sup>2</sup>이 되므로 다시 단위를 돌려주기 위해서입니다.
+
+그런데 학습을 시킬 때 사용했던 학습 데이터에 대해서 RMSE를 구해보면,<br>
+이미 모델이 학습 데이터를 기준으로 학습했으므로 RMSE가 낮게 나오는 것은 당연합니다.
+
+따라서, 보통은 모델을 학습 시키기 위한 데이터와 모델을 평가하기 위한 데이터를 분리합니다.<br>
+모델을 학습 시키기 위해 쓰는 데이터 셋을 training set 이라고 하고,<br>
+모델을 평가하기 위해 쓰는 데이터 셋을 test set 이라고 합니다.
+
+이렇게 데이터를 나누면 학습에 쓰인 데이터와 평가에 쓰인 데이터가 다르므로<br>
+좀 더 신빙성 있게 모델을 평가할 수 있게 됩니다.
+
+## scikit-learn을 이용한 간단한 선형회귀
+
+<script src="https://gist.github.com/Geniemo/d80197c4d5beb1f1ef80d322ef778e7f.js"></script>
