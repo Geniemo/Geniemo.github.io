@@ -169,4 +169,6 @@ non-convex 함수에서는 구한 극소점이 최소점이라고 확신할 수 
 다행히 MSE는 항상 convex 함수입니다.<br>
 따라서 선형 회귀를 할 때는 경사 하강법을 하나 정규 방정식을 하나 항상 최적의 \\(\theta\\)를 구할 수 있습니다.
 
+## scikit-learn을 이용한 간단한 다중 선형 회귀
+
 <script src="https://gist.github.com/Geniemo/be612cdd5c1a80bd1627da1bd4ad3ee5.js"></script>
