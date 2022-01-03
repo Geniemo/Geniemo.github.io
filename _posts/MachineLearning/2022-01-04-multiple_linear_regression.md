@@ -58,19 +58,19 @@ i번째 학습 데이터의 j번째 속성(입력 변수)은 \\(x_{j}^{(i)}\\)�
 
 \\( \theta =  \left[
 \begin {array}{c}
-    \theta_{0}  \\
-    \theta_{1}  \\
-    \vdots      \\
-    \theta_{n}  \\
+    \theta_{0}  \\\\
+    \theta_{1}  \\\\
+    \vdots      \\\\
+    \theta_{n}  \\\\
 \end{array}
 \right] \\)
 
 \\( x =  \left[
 \begin {array}{c}
-    x_{0}   \\
-    x_{1}   \\
-    \vdots  \\
-    x_{n}   \\
+    x_{0}   \\\\
+    x_{1}   \\\\
+    \vdots  \\\\
+    x_{n}   \\\\
 \end{array}
 \right] \\)
 
