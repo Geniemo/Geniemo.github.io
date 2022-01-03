@@ -58,19 +58,19 @@ i번째 학습 데이터의 j번째 속성(입력 변수)은 \\(x_{j}^{(i)}\\)�
 
 \\( \theta =  \left[
 \begin {array}{c}
-    \theta_{0}  \\\\
-    \theta_{1}  \\\\
-    \vdots      \\\\
-    \theta_{n}  \\\\
+    \theta_{0}  \newline
+    \theta_{1}  \newline
+    \vdots      \newline
+    \theta_{n}  \newline
 \end{array}
 \right] \\)
 
 \\( x =  \left[
 \begin {array}{c}
-    x_{0}   \\\\
-    x_{1}   \\\\
-    \vdots  \\\\
-    x_{n}   \\\\
+    x_{0}   \newline
+    x_{1}   \newline
+    \vdots  \newline
+    x_{n}   \newline
 \end{array}
 \right] \\)
 
@@ -104,27 +104,43 @@ i번째 학습 데이터의 j번째 속성(입력 변수)은 \\(x_{j}^{(i)}\\)�
 
 \\[ X = \left[
 \begin {array}{cccc}
-    x_{0}^{(1)} & x_{1}^{(1)} & \dots & x_{n}^{(1)} \\
-    x_{0}^{(2)} & x_{1}^{(2)} & \dots & x_{n}^{(2)} \\
-    \vdots & & & \\
-    x_{0}^{(m)} & x_{1}^{(m)} & \dots & x_{n}^{(m)} \\
+    x_{0}^{(1)} & x_{1}^{(1)} & \dots & x_{n}^{(1)} \newline
+    x_{0}^{(2)} & x_{1}^{(2)} & \dots & x_{n}^{(2)} \newline
+    \vdots & & & \newline
+    x_{0}^{(m)} & x_{1}^{(m)} & \dots & x_{n}^{(m)} \newline
 \end {array}
 \right],
 \theta = \left[
 \begin {array}{c}
-\theta_{0} \\
-\theta_{1} \\
-\vdots \\
-\theta_{n}
+\theta_{0} \newline
+\theta_{1} \newline
+\vdots \newline
+\theta_{n} \newline
 \end {array}
 \right],
 y = \left[
 \begin {array}{c}
-y_{0} \\
-y_{1} \\
-\vdots \\
-y_{m}
+y_{0} \newline
+y_{1} \newline
+\vdots \newline
+y_{m} \newline
 \end {array}
 \right] \\]일 때,
 
 \\[ \displaystyle \theta = \theta - \alpha\frac{2}{m}X^{T}(X\theta - y) \\]
+
+## 정규 방정식 (Normal Equation)
+
+여태는 손실을 줄이기 위해 경사 하강법을 사용했는데,
+다른 방법도 있습니다.
+
+경사 하강법에서는 특정 지점에서 시작해서 조금씩 아래로 향해서 극소점을 찾아간 건데,
+극소점은 기울기가 0이므로 기울기가 0인 지점을 찾는 방법도 있습니다.
+
+따라서, 손실 함수의 기울기가 0이 되는 지점을 방정식을 풀어서 찾아내면 됩니다.
+이렇게 방정식을 통해 극소점을 찾는 방법을 정규 방정식 (Normal Equation)이라고 합니다.
+
+그런데 방정식을 매번 직접 푸는 건 어렵습니다.
+따라서, 아래와 같은 식을 계산하면 손실 함수의 기울기가 0이 되도록 하는 \\(\theta\\)를 구할 수 있습니다.
+
+\\[ \theta = (X^{T}X)^{-1} \cdot X^{T}y \\]
