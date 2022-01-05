@@ -45,8 +45,6 @@ last_modified_at: 2022-01-05
 우리는 시그모이드 함수의 결과값이 0.5보다 큰지 작은지를 보고 결국 분류를 합니다.<br>
 따라서 이름은 회귀이지만 사용하는 건 주로 분류라는 점을 꼭 기억해야 합니다.
 
-<script src="https://gist.github.com/Geniemo/74cecbf3eb8f0ea1e797d2f3f36f0d41.js"></script>
-
 ## 로지스틱 회귀 가설 함수
 
 로지스틱 회귀에서 사용할 가설 함수를 알아보겠습니다.
@@ -99,11 +97,11 @@ last_modified_at: 2022-01-05
 대신 로그 손실(log-loss / cross entropy)를 사용합니다.<br>
 로그 손실 함수의 수식은 아래와 같습니다.
 
-$ logloss(h_{\theta}(x), y) = 
+\\[ logloss(h_{\theta}(x), y) = 
 \begin{cases}
 -log(h_{\theta}(x)), & y = 1 \newline
 -log(1 - h_{\theta}(x)), & y = 0 
-\end{cases}$
+\end{cases} \\]
 
 로그 손실 함수의 그래프는 아래와 같습니다.
 
@@ -179,13 +177,13 @@ y_{m} \newline
 A, B, C의 세 카테고리로 데이터를 분류해야 한다고 가정하겠습니다.
 
 처음에는 문제를 단순화해서 A인지 아닌지만 분류합니다.<br>
-이렇게 학습시켜서 얻은 가설 함수를 \\( h_{theta}^{(0)}(x) \\)라고 하겠습니다.
+이렇게 학습시켜서 얻은 가설 함수를 \\( h_{\theta}^{(0)}(x) \\)라고 하겠습니다.
 
 그 다음에는 B인지 아닌지만 분류합니다.
-이렇게 학습시켜서 얻은 가설 함수를 \\( h_{theta}^{(1)}(x) \\)라고 하겠습니다.
+이렇게 학습시켜서 얻은 가설 함수를 \\( h_{\theta}^{(1)}(x) \\)라고 하겠습니다.
 
 마지막으로 C인지 아닌지를 분류합니다.
-이렇게 학습시켜서 얻은 가설 함수를 \\( h_{theta}^{(2)}(x) \\)라고 하겠습니다.
+이렇게 학습시켜서 얻은 가설 함수를 \\( h_{\theta}^{(2)}(x) \\)라고 하겠습니다.
 
 이렇게 3개의 가설 함수를 얻었습니다.<br>
 이제 주어진 데이터들의 입력 변수들을 세 개의 가설 함수에 각각 넣습니다.
@@ -193,8 +191,9 @@ A, B, C의 세 카테고리로 데이터를 분류해야 한다고 가정하겠�
 그러면 각각의 데이터가 A, B, C일 확률을 모두 구할 수 있습니다.<br>
 여기서 가장 확률이 높은 카테고리로 분류해주면 됩니다.
 
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
 ## scikit-learn을 이용한 간단한 로지스틱 회귀
 
 <script src="https://gist.github.com/Geniemo/ca3d915b2e7a88e88bc69b0c6a37fa85.js"></script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
