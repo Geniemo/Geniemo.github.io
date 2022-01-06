@@ -73,7 +73,7 @@ min-max algorithm은 데이터의 최솟값, 최댓값을 이용해서 데이터
 
 수식으로 나타내면 아래와 같습니다.
 
-\\[ \displaystyle x_{new} = \frac{x - \mu}{\sigma} \\]
+\\[ \displaystyle x_{new} = \frac{x_{old} - \mu}{\sigma} \\]
 
 ## scikit-learn으로 normalization 해보기
 
