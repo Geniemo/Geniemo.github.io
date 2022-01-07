@@ -68,7 +68,7 @@ last_modified_at: 2022-01-07
 편향과 분산의 적당한 밸련스를 찾아내야합니다.
 
 위의 과소적합 그래프도, 과대적합 그래프도 아닌<br>
-아래와 같은 그래프를 찾아야 한다는 것입니다.
+아래와 같은 그래프를 찾아야 한다는 것입니다. [이미지 출처](https://en.wikipedia.org/wiki/Overfitting)
 
 <img src="/assets/images/Machine Learning/fitted.png" width="60%" height="60%">
 
