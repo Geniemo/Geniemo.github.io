@@ -113,14 +113,14 @@ scikit-learn으로 복잡한 회귀 모델을 만들어 과소적합을 한 번 
 
 L1 정규화를 적용할 때의 손실 함수의 수식을 보겠습니다.
 
-\\[ \displaystyle J(\theta) = \frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})^2 + \sum_{i=1}^{n}|\theta_{i}| \\]
+\\[ \displaystyle J(\theta) = \frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})^2 + \sum_{i=1}^{n}\vert\theta_{i}\vert \\]
 
 이렇게 \\(\theta\\) 값들의 절댒값을 손실 함수에 모두 더해주면 됩니다.<br>
 그런데 이 때, \\(\theta_{0}\\)은 과적합과 상관이 없기 때문에 \\(\theta_{0}\\)은 더해주지 않습니다.
 
 그런데 실제로는 정규화 항에 \\(\lambda\\)도 곱해주는데, \\(\theta\\)값이 커지는 것에 대해 얼마나 페널티를 줄지를 정해주는 것입니다.
 
-\\[ \displaystyle J(\theta) = \frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})^2 + \lambda\sum_{i=1}^{n}|\theta_{i}| \\]
+\\[ \displaystyle J(\theta) = \frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})^2 + \lambda\sum_{i=1}^{n}\vert\theta_{i}\vert \\]
 
 예를 들어 \\(\lambda\\)값이 크면 \\(\theta\\)값들이 조금만 커져도 손실 함수가 굉장히 커지므로 \\(\theta\\)를 줄이는 게 우선이고,<br>
 \\(\lambda\\)값이 작으면 \\(\theta\\)값이 커져도 손실 함수가 별로 안커지므로 MSE를 줄이는 것이 우선입니다.
@@ -129,7 +129,7 @@ L1 정규화를 적용하는 회귀 모델을 Lasso Regression 또는 Lasso mode
 
 > L2 정규화
 
-L2 정규화도 L1 정규화와 거의 유사한데 \\(|\theta|\\)값들을 모두 더하는 대신에 \\(\theta^{2}\\)의 값들을 모두 더해주면 됩니다.
+L2 정규화도 L1 정규화와 거의 유사한데 \\(\vert\theta\vert\\)값들을 모두 더하는 대신에 \\(\theta^{2}\\)의 값들을 모두 더해주면 됩니다.
 
 \\[ \displaystyle J(\theta) = \frac{1}{m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})^2 + \lambda\sum_{i=1}^{n}\theta_{i}^{2} \\]
 
@@ -154,7 +154,7 @@ LogisticRegression에는 penalty라는 옵셔널 파라미터를 전달해주면
 딥러닝 모델의 파라미터는 보통 \\(\theta\\)대신 \\(w\\)로 나타냅니다.<br>
 딥러닝 모델에 정규화를 적용하려면 모델의 손실 함수에 정규화 항으로 아래 둘 중 하나를 더해주면 됩니다.
 
-\\[ \displaystyle \lambda\sum_{i=1}^{n}|w_{i}|, \lambda\sum_{i=1}^{n}w_{i}^{2} \\]
+\\[ \displaystyle \lambda\sum_{i=1}^{n}\vertw_{i}\vert, \lambda\sum_{i=1}^{n}w_{i}^{2} \\]
 
 ## L1, L2 정규화의 차이
 
