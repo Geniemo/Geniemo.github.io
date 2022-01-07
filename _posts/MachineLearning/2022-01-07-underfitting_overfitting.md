@@ -154,7 +154,7 @@ LogisticRegression에는 penalty라는 옵셔널 파라미터를 전달해주면
 딥러닝 모델의 파라미터는 보통 \\(\theta\\)대신 \\(w\\)로 나타냅니다.<br>
 딥러닝 모델에 정규화를 적용하려면 모델의 손실 함수에 정규화 항으로 아래 둘 중 하나를 더해주면 됩니다.
 
-\\[ \displaystyle \lambda\sum_{i=1}^{n}\vertw_{i}\vert, \lambda\sum_{i=1}^{n}w_{i}^{2} \\]
+\\[ \displaystyle \lambda\sum_{i=1}^{n}\vert w_{i} \vert, \lambda\sum_{i=1}^{n}w_{i}^{2} \\]
 
 ## L1, L2 정규화의 차이
 
