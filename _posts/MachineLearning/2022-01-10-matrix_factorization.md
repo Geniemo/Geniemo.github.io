@@ -54,7 +54,7 @@ last_modified_at: 2022-01-10
 
 \\[ \displaystyle \theta_{k}^{(i)} \leftarrow \theta_{k}^{(i)} - \alpha\frac{\partial}{\partial\theta_{k}^{(i)}}J(\Theta, X) = \theta_{k}^{(i)} - \alpha\sum_{j:r(i, j)=1}((\theta^{(i)})^{T}x^{(j)} - y^{(i, j)})x_{k}^{(j)} \\]
 
-\\[ \displaystyle x_{k}^{(j)} \leftarrow x_{k}^{(j)} - \alpha\frac{\partial}{\partial x_{k}^{(j)}}J(\Theta, X) = x_{k}^{(j)} - \alpha\sum_{j:r(i, j)=1}((\theta^{(i)})^{T}x^{(j)} - y^{(i, j)})\theta_{k}^{(i)} \\]
+\\[ \displaystyle x_{k}^{(j)} \leftarrow x_{k}^{(j)} - \alpha\frac{\partial}{\partial x_{k}^{(j)}}J(\Theta, X) = x_{k}^{(j)} - \alpha\sum_{i:r(i, j)=1}((\theta^{(i)})^{T}x^{(j)} - y^{(i, j)})\theta_{k}^{(i)} \\]
 
 이를 이용하여 경사 하강법을 한 번 할 때마다 \\(\theta\\)와 \\(X\\)를 모두 업데이트 해주는 것입니다.
 
